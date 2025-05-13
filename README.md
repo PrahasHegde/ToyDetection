@@ -18,3 +18,5 @@ python val.py --weights runs/train/toy_detector/weights/best.pt --data d.yaml --
 
 #VISUALIZATION-->
 runs/train/toy_detector/results.png
+
+#ALL MODEL OUTPUTS , GRAPHS ARE IN --> yolov5\runs\train\toy_detector5
