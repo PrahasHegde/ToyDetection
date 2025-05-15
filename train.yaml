@@ -1,0 +1,5 @@
+train: /home/supercomputing/studys/ToyDetection/train
+val: /home/supercomputing/studys/ToyDetection/valid
+test: /home/supercomputing/studys/ToyDetection/test
+nc: 2
+names: ["pig", "bull"]
