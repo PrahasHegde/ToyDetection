@@ -1,5 +1,5 @@
-train: /home/supercomputing/studys/ToyDetection/train
-val: /home/supercomputing/studys/ToyDetection/valid
-test: /home/supercomputing/studys/ToyDetection/test
+train: dataset/yolo_dataset/train
+val: dataset/yolo_dataset/valid
+test: dataset/yolo_dataset/test
 nc: 2
-names: ["pig", "bull"]
+names: ["bull", "pig"]

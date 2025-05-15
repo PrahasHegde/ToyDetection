@@ -19,7 +19,7 @@ train_results = model.train(
     verbose=True, # Display training progress
     multi_scale = True,
     pretrained = True,
-    single_cls = True,
+    single_cls = False,
     cos_lr=True,
     box = 15,
 )
