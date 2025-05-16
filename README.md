@@ -20,3 +20,6 @@ python val.py --weights runs/train/toy_detector/weights/best.pt --data d.yaml --
 runs/train/toy_detector/results.png
 
 #ALL MODEL OUTPUTS , GRAPHS ARE IN --> yolov5\runs\train\toy_detector5
+
+# YOLO11 branch
+use the weights in runs/detect/train8/weights
