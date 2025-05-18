@@ -23,3 +23,7 @@ runs/train/toy_detector/results.png
 
 # YOLO11 branch
 use the weights in runs/detect/train8/weights
+
+# For Yolov11
+yolo task=detect mode=predict model=runs/detect/train8/weights/best.pt source=1     <--- for detect mode
+yolo task=detect mode=train model=yolov11.pt data=train.yaml epochs=100 imgsz=640 batch=8 device=0  <--- for training on GPU 
