@@ -1,29 +1,27 @@
-#RUN THIS FOR TRAINING-->
-python train.py --img 416 --batch 8 --epochs 100 --data d.yaml --weights yolov5s.pt --name toy_detector
+## All methods necessary for training and testing the model are listed in `main.py`
 
-cam.py --> for webcam detection
+## TRAINING
+Training weights are saved to: "runs/detect/train[specific model number]/weights/"
 
-#TEST THE MODEL
-python detect.py --weights runs/train/toy_detector/weights/best.pt --img 640 --source path/to/images/
+### Option 1: Run from main:
+Execute the training function in `main.py`
 
-results --> runs/detect/exp/
+### Option 2: Run from CLI:
+```bash
+yolo task=detect mode=train model=yolov8s.pt data=train.yaml epochs=100 imgsz=640 batch=8 device=0
+```
+
+# TESTING
+The recordings of the live detection are saved to: "runs/detect/webcam_pred[specific model number]/"
+
+## Testing (Live Detection)
+To test the model on a webcam (or video/image), either use the function in `main.py` or run the following CLI command:
+```bash
+yolo task=detect mode=predict model=runs/detect/train8/weights/best.pt source=1
+```
 
 
-#TEST ON WEBCAM 
-python detect.py --weights runs/train/toy_detector/weights/best.pt --img 640 --source 0
+# VISUALIZATION 
+# Train/Val statistics/graphs are stored in: 
+runs/detect/train[<specific model number>]/results.png
 
-#EVALUATION WITH TEST SET
-python val.py --weights runs/train/toy_detector/weights/best.pt --data d.yaml --task test
-
-
-#VISUALIZATION-->
-runs/train/toy_detector/results.png
-
-#ALL MODEL OUTPUTS , GRAPHS ARE IN --> yolov5\runs\train\toy_detector5
-
-# YOLO11 branch
-use the weights in runs/detect/train8/weights
-
-# For Yolov11
-yolo task=detect mode=predict model=runs/detect/train8/weights/best.pt source=1     <--- for detect mode
-yolo task=detect mode=train model=yolov11.pt data=train.yaml epochs=100 imgsz=640 batch=8 device=0  <--- for training on GPU 
