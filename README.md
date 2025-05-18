@@ -21,7 +21,6 @@ yolo task=detect mode=predict model=runs/detect/train8/weights/best.pt source=1
 ```
 
 
-# VISUALIZATION 
-# Train/Val statistics/graphs are stored in: 
-runs/detect/train[<specific model number>]/results.png
+# VISUALIZATION  
+Train/Val statistics/graphs are stored in: runs/detect/train[<specific model number>]/results.png
 
